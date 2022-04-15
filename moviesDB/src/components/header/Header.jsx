@@ -39,8 +39,8 @@ const Header = ({ handleSubmit }) => {
           </li>
           <li>
             {" "}
-            <Link className="header__item" to="/audioandsubtitle">
-              Audio & Subtitles
+            <Link className="header__item" to="/recommendations">
+              Recommendations
             </Link>
           </li>
           <li>

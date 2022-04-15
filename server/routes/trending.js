@@ -5,7 +5,7 @@ const axios = require("axios");
 router.get("/trending", (req, res) => {
   axios
     .get(
-      "https://api.themoviedb.org/3/trending/all/day?api_key=2f39c6d4e6f81ddb8e7919599d2a5894"
+      "https://api.themoviedb.org/3/trending/all/day?api_key=2f39c6d4e6f81ddb8e7919599d2a5894&page=2"
     )
     .then((response) => {
       res.status(200).json(response.data);

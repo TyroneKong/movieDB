@@ -14,6 +14,7 @@ function MovieList({ movies, video }) {
                 poster={movie.poster_path}
                 video={video}
                 id={movie.id}
+                data={movie}
               />
             </div>
           );

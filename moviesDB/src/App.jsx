@@ -8,7 +8,7 @@ import Series from "./series/Series";
 import NewandPopular from "./pages/NewandPopular";
 import Films from "./pages/Films";
 import MyList from "./pages/MyList";
-import AudioandSubtitles from "./pages/AudioandSubtitles";
+import Recommendations from "./pages/Recommendations";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -24,6 +24,7 @@ function App() {
           movie.popularity > 30
       );
       console.log(filteredData);
+      setMovies(filteredData);
     } catch (err) {
       console.log(err);
     }
@@ -54,7 +55,7 @@ function App() {
           <Route path="/films" component={Films} />
           <Route path="/newandpopular" component={NewandPopular} />
           <Route path="/mylist" component={MyList} />
-          <Route path="/audioandsubtitles" component={AudioandSubtitles} />
+          <Route path="/recommendations" component={Recommendations} />
         </Switch>
       </Router>
     </div>
