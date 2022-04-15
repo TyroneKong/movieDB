@@ -1,0 +1,8 @@
+.nowPlayingCard {
+  &__image {
+    cursor: pointer;
+    width: 150px;
+    height: 200px;
+    border: 2px solid red;
+  }
+}

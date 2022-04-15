@@ -1,0 +1,21 @@
+.header {
+  border: 2px solid red;
+  &__nav {
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  &__item {
+    color: white;
+    text-decoration: none;
+  }
+  &__logo {
+    height: 100px;
+  }
+  &__logo-container {
+    display: flex;
+  }
+}

@@ -1,0 +1,13 @@
+.search {
+  &__form {
+    border: 2px solid red;
+    display: flex;
+  }
+  &__input {
+    height: 40px;
+  }
+  &__button {
+    font-size: 20px;
+    height: 45px;
+  }
+}
