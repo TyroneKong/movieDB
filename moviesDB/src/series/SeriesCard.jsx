@@ -3,7 +3,7 @@ import "../components/series/SeriesCard.scss";
 
 function SeriesCard({ data }) {
   const filteredData = data.filter((series) => series.poster_path !== null);
-  console.log(filteredData);
+
   return (
     <div className="series__card">
       {filteredData.map((series, index) => {

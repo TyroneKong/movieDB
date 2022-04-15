@@ -14,6 +14,7 @@ function NowPlayingList({ nowplaying, video }) {
                 id={movie.id}
                 poster={movie.poster_path}
                 video={video}
+                data={movie}
               />
             </div>
           );

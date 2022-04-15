@@ -1,9 +1,9 @@
 * {
-  background-color: black;
-  color: white;
 }
 
 .App {
+  color: white;
+  background-color: black;
   text-align: center;
 }
 

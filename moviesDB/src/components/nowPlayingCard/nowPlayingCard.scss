@@ -5,4 +5,21 @@
     height: 200px;
     border: 2px solid red;
   }
+  &__modalbutton {
+    cursor: pointer;
+    position: relative;
+    bottom: 200px;
+    left: 50px;
+  }
+}
+
+.modal {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  &__closebutton {
+    width: 25%;
+    align-self: center;
+  }
 }

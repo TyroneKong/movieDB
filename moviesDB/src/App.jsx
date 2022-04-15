@@ -24,7 +24,6 @@ function App() {
           movie.popularity > 30
       );
       console.log(filteredData);
-      setMovies(filteredData);
     } catch (err) {
       console.log(err);
     }

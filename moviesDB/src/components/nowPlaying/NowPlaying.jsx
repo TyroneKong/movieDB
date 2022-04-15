@@ -16,6 +16,7 @@ function NowPlaying({ movies, searchResults }) {
       const filterLanguage = data.data.filter(
         (movie) => movie.original_language === "en"
       );
+
       setNowPlaying(filterLanguage);
     } catch (err) {
       console.log(err);
