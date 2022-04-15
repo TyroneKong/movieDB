@@ -37,4 +37,4 @@ in progress
 
 ## Author
 
-- Linkedin - []()
+- Linkedin - [www.linkedin.com/in/tyrone-kong]()
