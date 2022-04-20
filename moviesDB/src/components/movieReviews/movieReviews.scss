@@ -1,0 +1,14 @@
+.moviewReviewForm {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  &__input {
+  }
+  &__comment {
+    width: 25%;
+  }
+}
+
+body {
+  background-color: black;
+}
