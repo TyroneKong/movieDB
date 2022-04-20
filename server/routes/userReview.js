@@ -1,28 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/userReview.model");
-
-const getComments = (req, res) => {
-  User.find({})
-    .then((user) => {
-      res.json(user);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
-
-const createComment = (req, res) => {
-  const userReview = req.body;
-  const newUserReview = new User(userReview);
-  newUserReview.save();
-  res.json(userReview);
-};
+const userReviewController = require("../controllers/userReviewController");
 
 // get all comments
-router.get("/getComments", getComments);
+router.get("/getComments", userReviewController.getComments);
 
 //create a new comment
-router.post("/createComment", createComment);
+router.post("/createComment", userReviewController.createComment);
 
 module.exports = router;
