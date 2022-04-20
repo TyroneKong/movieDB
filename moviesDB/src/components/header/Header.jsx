@@ -3,6 +3,7 @@ import "./Header.scss";
 import Search from "../search/Search";
 import { Link } from "react-router-dom";
 import filmcube from "../assets/images/filmcube.png";
+
 const Header = ({ handleSubmit }) => {
   return (
     <div className="header">
@@ -38,11 +39,13 @@ const Header = ({ handleSubmit }) => {
             </Link>
           </li>
           <li>
-            {" "}
             <Link className="header__item" to="/recommendations">
               Recommendations
             </Link>
           </li>
+          <Link className="header__item" to="/movieReviews">
+            Movie reviews
+          </Link>
           <li>
             <Search handleSubmit={() => handleSubmit} />
           </li>

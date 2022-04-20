@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./nowPlayingCard.scss";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -18,7 +18,7 @@ const style = {
   p: 4,
 };
 
-function NowPlayingCard({ poster, video, id, data }) {
+function NowPlayingCard({ poster, video, id, data, review }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -45,6 +45,7 @@ function NowPlayingCard({ poster, video, id, data }) {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {data.title}
           </Typography>
+
           <img
             onClick={() => video(id)}
             className="nowPlayingCard__image"
@@ -61,6 +62,7 @@ function NowPlayingCard({ poster, video, id, data }) {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Release date: {data.release_date}
           </Typography>
+
           <Button
             className="modal__closebutton"
             onClick={handleClose}

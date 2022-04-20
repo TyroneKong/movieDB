@@ -1,8 +1,9 @@
-import React from "react";
+import axios from "axios";
+import { React, useState, useEffect } from "react";
 import NowPlayingCard from "../nowPlayingCard/NowPlayingCard";
 import "./NowPlayingList.scss";
 
-function NowPlayingList({ nowplaying, video }) {
+function NowPlayingList({ nowplaying, video, review }) {
   return (
     <>
       <h3>Now Playing</h3>
@@ -15,6 +16,7 @@ function NowPlayingList({ nowplaying, video }) {
                 poster={movie.poster_path}
                 video={video}
                 data={movie}
+                review={review}
               />
             </div>
           );

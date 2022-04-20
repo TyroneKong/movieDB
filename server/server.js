@@ -8,6 +8,19 @@ const mainVideoRoute = require("./routes/mainVideo");
 const filmRoute = require("./routes/films");
 const trendingRoute = require("./routes/trending");
 const seriesRoute = require("./routes/series");
+const userRoute = require("./routes/userReview");
+const movieReviewRoute = require("./routes/reviews");
+require("dotenv").config();
+
+const mongoose = require("mongoose");
+
+const uri = process.env.URI;
+mongoose.connect(uri);
+
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB connection successfull");
+});
 
 app.use(express.json());
 app.use(cors());
@@ -19,7 +32,9 @@ app.use(
   mainVideoRoute,
   filmRoute,
   seriesRoute,
-  trendingRoute
+  trendingRoute,
+  userRoute,
+  movieReviewRoute
 );
 
 app.get("/", (req, res) => {

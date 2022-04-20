@@ -9,6 +9,7 @@ import NewandPopular from "./pages/NewandPopular";
 import Films from "./pages/Films";
 import MyList from "./pages/MyList";
 import Recommendations from "./pages/Recommendations";
+import MovieReviews from "./pages/MovieReviews";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -56,6 +57,7 @@ function App() {
           <Route path="/newandpopular" component={NewandPopular} />
           <Route path="/mylist" component={MyList} />
           <Route path="/recommendations" component={Recommendations} />
+          <Route path="/movieReviews" component={MovieReviews} />
         </Switch>
       </Router>
     </div>
