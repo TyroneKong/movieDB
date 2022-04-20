@@ -7,9 +7,9 @@ More content to be added...
 
 - [Overview](#overview)
 
-  - [Screenshot](#screenshot)
+- [Screenshot](#screenshot)
 
-  - [Built with](#built-with)
+- [Built with](#built-with)
  
 - [Author](#author)
 
