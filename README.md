@@ -1,7 +1,7 @@
 # movieDB
 App to allow users to find movies and tv shows 
 
-in progress
+More content to be added...
 
 ## Table of contents
 
