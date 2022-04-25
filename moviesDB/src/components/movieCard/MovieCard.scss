@@ -4,6 +4,9 @@
     width: 150px;
     height: 200px;
     border: 2px solid red;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__modalbutton {
     cursor: pointer;

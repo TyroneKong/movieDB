@@ -4,6 +4,9 @@
     width: 150px;
     height: 200px;
     border: 2px solid red;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__modalbutton {
     cursor: pointer;
@@ -21,5 +24,23 @@
   &__closebutton {
     width: 25%;
     align-self: center;
+  }
+  &__review-container{
+    overflow:scroll;
+    height:200px;
+
+  }
+  &__review{
+    background-color:white;
+    color: black;
+    font-size:20px;
+    line-height: 30px;
+    &-button{
+      align-self:center;
+    }
+  }
+  &__avatar{
+    border-radius:50px;
+    width:50px;
   }
 }

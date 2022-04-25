@@ -24,23 +24,6 @@ function NowPlaying({ movies, searchResults }) {
     }
   };
 
-  const fetchReviews = (id) => {
-    axios
-      .get(`http://localhost:8789/movieReview/${id}`)
-      .then((response) => {
-        const filteredData = response.data.results.filter((item) => item);
-        if (filteredData.length === 0) {
-          console.log("no data");
-        } else {
-          setReviews(filteredData);
-          console.log(filteredData);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const getVideo = async (id) => {
     try {
       const video = await axios.get(`http://localhost:8789/getVideo/${id}`);
@@ -49,7 +32,6 @@ function NowPlaying({ movies, searchResults }) {
         allVideos[Math.floor(Math.random() * allVideos.length)];
 
       setVideoKey(randomVideo.key);
-      fetchReviews(id);
     } catch (err) {
       console.log(err);
     }
@@ -76,12 +58,12 @@ function NowPlaying({ movies, searchResults }) {
     <div>
       <MainVideo videoKey={videoKey} />
       <div className="card__container"></div>
-      {searchResults ? (
-        <MovieList movies={movies} video={getVideo} />
-      ) : (
+      {searchResults && <MovieList movies={movies} video={getVideo} />}
+      {!searchResults && (
         <NowPlayingList
           video={getVideo}
           nowplaying={nowPlaying}
+          setReview={setReviews}
           review={reviews}
         />
       )}

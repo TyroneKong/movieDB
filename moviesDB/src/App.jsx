@@ -31,6 +31,8 @@ function App() {
     }
   };
 
+
+  //function which invokes call for search results which sets state to true, hiding nowPlaying 
   const handleSubmit = (event) => {
     event.preventDefault();
     const input = event.target.input.value;

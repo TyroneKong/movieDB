@@ -3,5 +3,8 @@
     border: 2px solid red;
     width: 150px;
     height: 200px;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
